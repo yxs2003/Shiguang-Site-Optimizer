@@ -201,7 +201,7 @@ v1.3 整合所有常见优化功能+网站信息统计
 
 本项目遵循 **[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)** (CC BY-NC-SA 4.0) 许可证。
 
-* **您可以** 自由地使用、修改和分发本汉化文件。
+* **您可以** 自由地使用、修改和分发本优化插件。
 * **但您必须** 遵循以下条款：
     * **署名**: 必须注明本项目的原始来源。
     * **非商业性使用**: 禁止将本插件用于任何商业用途。
