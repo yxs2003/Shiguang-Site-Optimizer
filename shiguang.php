@@ -230,3 +230,18 @@ Shiguang_Code::init();
 Shiguang_Accelerate::init();
 Shiguang_TDK::init();
 Shiguang_Sitemap::init(); 
+
+add_filter( 'plugin_row_meta', 'shiguang_plugin_add_links', 10, 2 );
+
+function shiguang_plugin_add_links( $links, $file ) {
+    if ( strpos( $file, 'shiguang.php' ) !== false ) {
+        $new_links = array(
+            '<a href="https://www.shiguang.ink/1851" target="_blank">' . __( '访问插件主页', 'shiguang-site-optimizer' ) . '</a>',
+        );
+
+        // 将新链接合并到现有链接数组中
+        $links = array_merge( $links, $new_links );
+    }
+
+    return $links;
+}
