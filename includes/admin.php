@@ -109,7 +109,6 @@ class Shiguang_Admin {
                     <a class="nav-tab" href="#tab-sitemap">网站地图</a>
                 </h2>
 
-                <!-- 插件功能介绍（信息看板仅在此显示） -->
                 <div class="shiguang-tab" id="tab-intro">
                     <h2>插件功能介绍</h2>
                     <p class="sg-muted">Shiguang-Site Optimizer 通过模块化的方式，帮你关闭不需要的功能、精简前端输出、优化编辑体验、控制更新与邮件、图片与链接规则、界面特效、注入自定义代码、CDN 加速、SEO TDK，以及站点地图（Sitemap）。你可以在上方标签里逐项启用/关闭。</p>
@@ -121,7 +120,6 @@ class Shiguang_Admin {
                         $exts = $info['php_extensions'];
                         ?>
                         <div class="sg-grid">
-                            <!-- 环境信息 -->
                             <div class="sg-card sg-col-4">
                                 <h3>环境信息</h3>
                                 <div class="sg-kv"><span>WordPress 版本</span><strong><?php echo esc_html($info['wp_version']); ?></strong></div>
@@ -129,7 +127,6 @@ class Shiguang_Admin {
                                 <div class="sg-kv"><span>MySQL 版本</span><strong><?php echo esc_html($info['mysql_version']); ?></strong></div>
                             </div>
 
-                            <!-- 网站 / 插件 / 用户 -->
                             <div class="sg-card sg-col-4">
                                 <h3>网站信息</h3>
                                 <div class="sg-kv"><span>启用优化项</span><strong><?php echo intval($info['enabled_options']); ?></strong></div>
@@ -137,7 +134,6 @@ class Shiguang_Admin {
                                 <div class="sg-kv"><span>用户总量</span><strong><?php echo intval($info['total_users']); ?></strong></div>
                             </div>
 
-                            <!-- 文章信息 -->
                             <div class="sg-card sg-col-4">
                                 <h3>文章信息</h3>
                                 <div class="sg-kv"><span>文章总量</span><strong><?php echo intval($info['total_posts']); ?></strong></div>
@@ -147,7 +143,6 @@ class Shiguang_Admin {
                                 </div>
                             </div>
 
-                            <!-- 评论 + PHP 扩展 -->
                             <div class="sg-card sg-col-6">
                                 <h3>评论信息</h3>
                                 <div class="sg-kv"><span>评论总量</span><strong><?php echo intval($info['total_comments']); ?></strong></div>
@@ -346,14 +341,17 @@ class Shiguang_Admin {
                     </p>
 
                     <p>
-                        <form method="post" action="<?php echo esc_url( admin_url('admin-post.php') ); ?>">
-                            <?php wp_nonce_field('shiguang_generate_sitemap'); ?>
-                            <input type="hidden" name="action" value="shiguang_generate_sitemap">
-                            <button type="submit" class="button button-primary">一键生成静态 sitemap.xml</button>
-                            <span class="sg-muted">（写入站点根目录，若失败请检查写权限）</span>
-                        </form>
+                        <?php
+                        // 创建一个包含 nonce 的安全 URL
+                        $generate_sitemap_url = wp_nonce_url(
+                            admin_url('admin-post.php?action=shiguang_generate_sitemap'),
+                            'shiguang_generate_sitemap'
+                        );
+                        ?>
+                        <a href="<?php echo esc_url($generate_sitemap_url); ?>" class="button button-primary">一键生成静态 sitemap.xml</a>
+                        <span class="sg-muted">（写入站点根目录，若失败请检查写权限）</span>
                     </p>
-                </div>
+                    </div>
 
                 <?php submit_button(); ?>
             </form>
