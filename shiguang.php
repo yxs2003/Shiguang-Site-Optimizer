@@ -234,6 +234,7 @@ Shiguang_Sitemap::init();
 add_filter( 'plugin_row_meta', 'shiguang_plugin_add_links', 10, 2 );
 
 function shiguang_plugin_add_links( $links, $file ) {
+
     if ( strpos( $file, 'shiguang.php' ) !== false ) {
         $new_links = array(
             '<a href="https://www.shiguang.ink/1851" target="_blank">' . __( '访问插件主页', 'shiguang-site-optimizer' ) . '</a>',
@@ -243,5 +244,6 @@ function shiguang_plugin_add_links( $links, $file ) {
         $links = array_merge( $links, $new_links );
     }
 
+    // 必须返回 links 数组
     return $links;
 }
