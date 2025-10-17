@@ -236,11 +236,17 @@ v3.3.2 修复静态资源加速的bug；添加去除前台加载第三方样式�
 
 v3.4.0 添加文章/页面等显示ID功能+文章页显示缩略图功能+重构上传图片重命名的逻辑
 
-v3.5.1 添加插件自动更新功能，修复防止入侵nginx的逻辑处理
-
+v3.5.5 添加插件自动更新功能，修复防止入侵nginx的逻辑处理
 
 ```
 
+## 🍃Pro版截图
+
+[![首页](https://s21.ax1x.com/2025/10/17/pVLpw9S.jpg)](https://imgchr.com/i/pVLpw9S)
+[![仪表盘](https://s21.ax1x.com/2025/10/17/pVLpUtf.jpg)](https://imgchr.com/i/pVLpUtf)
+[![功能页1](https://s21.ax1x.com/2025/10/17/pVLpNAP.jpg)](https://imgchr.com/i/pVLpNAP)
+[![功能页2](https://s21.ax1x.com/2025/10/17/pVLpah8.jpg)](https://imgchr.com/i/pVLpah8)
+[![功能页3](https://s21.ax1x.com/2025/10/17/pVLp01g.jpg)](https://imgchr.com/i/pVLp01g)
 
 ## 🔗贡献与反馈
 
