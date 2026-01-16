@@ -1,3 +1,24 @@
 .shiguang-wrap .ul-disc{list-style: disc;padding-left: 20px;}
 .shiguang-wrap .nav-tab-wrapper{margin-top:14px;}
 .shiguang-wrap .form-table th{width:220px;}
+
+/* Grid Layout */
+.sg-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:10px;margin-bottom:20px;}
+.sg-card{border:2px dashed #cbd5e1;border-radius:12px;padding:16px;background:#fff}
+.sg-col-3{grid-column:span 3;}
+.sg-col-4{grid-column:span 4;}
+.sg-col-6{grid-column:span 6;}
+
+/* Badges */
+.sg-badge{display:inline-block;padding:2px 8px;border-radius:999px;background:#e2e8f0;margin-right:6px;margin-bottom:6px}
+.sg-badge.ok{background:#d1fae5; color: #065f46;}
+.sg-badge.no{background:#fee2e2; color: #991b1b;}
+
+/* Utils */
+.sg-kv{display:flex;justify-content:space-between;margin:6px 0;border-bottom:1px dashed #e5e7eb;padding-bottom:4px}
+.sg-muted{color:#64748b}
+.sg-link{margin-right:10px}
+
+/* Responsiveness */
+@media (max-width: 1024px){ .sg-col-3,.sg-col-4{grid-column:span 6;} }
+@media (max-width: 600px){ .sg-col-3,.sg-col-4,.sg-col-6{grid-column:span 12;} }
