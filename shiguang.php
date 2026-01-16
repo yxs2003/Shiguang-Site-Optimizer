@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Shiguang - Site Optimizer
  * Description: 模块化的站点优化插件（输出精简、功能屏蔽、编辑优化、更新与邮件控制、图片与链接优化、界面特效、代码注入、加速、TDK、Sitemap 等）。
- * Version: 1.3.1
+ * Version: 1.5.0
  * Author: FuHua
  * Text Domain: https://www.shiguang.ink/1851
  */
@@ -247,4 +247,3 @@ function shiguang_plugin_add_links( $links, $file ) {
     // 必须返回 links 数组
     return $links;
 }
-
